@@ -1,5 +1,11 @@
 # BanglaSafe
 
+<p align="center">
+  <a href="https://banglallm.github.io/banglasafe/"><img alt="Accepted at EMNLP 2026 (Findings)" src="https://img.shields.io/badge/%F0%9F%94%A5%20ACCEPTED%20AT-EMNLP%202026%20%28FINDINGS%29%20%F0%9F%94%A5-b22222?style=for-the-badge&labelColor=f5a623"></a>
+</p>
+
+[![Project page](https://img.shields.io/badge/Project-Page-3fb950)](https://banglallm.github.io/banglasafe/)
+[![Leaderboard](https://img.shields.io/badge/Leaderboard-18%20models-8957e5)](https://banglallm.github.io/banglasafe/leaderboard.html)
 [![PyPI](https://img.shields.io/pypi/v/banglasafe)](https://pypi.org/project/banglasafe/)
 [![Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20dataset-BanglaLLM%2FBanglaSafe-yellow)](https://huggingface.co/datasets/BanglaLLM/BanglaSafe)
 [![Python](https://img.shields.io/pypi/pyversions/banglasafe)](https://pypi.org/project/banglasafe/)
