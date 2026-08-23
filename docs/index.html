@@ -25,6 +25,7 @@ if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)
   --btnbg:#1d2126; --btnfg:#ffffff; --btnline:#1d2126; --btnhover:#000;
   --ghostbg:#ffffff; --ghostline:#ddd4c5;
   --venuebg:#fdefe1; --venuefg:#9c3d0d; --venueline:#f0d6bb;
+  --okbg:#ffeaa8; --okfg:#8a2f0c; --okline:#e8a33d; --okv:#14508f;
   --hlrow:#fbeee1;
   --maxw:960px;
   --text:650px;     /* every text block and the table share this column */
@@ -56,6 +57,11 @@ footer a{text-decoration:underline; text-underline-offset:2px}
 .venue{display:inline-block; margin:20px 0 6px; padding:7px 16px; border-radius:999px;
   background:var(--venuebg); color:var(--venuefg); font-size:14px; font-weight:600;
   border:1px solid var(--venueline)}
+/* the acceptance badge earns a louder treatment than the neutral venue pill */
+.venue.accepted{display:inline-flex; align-items:center; gap:9px; padding:9px 20px;
+  background:var(--okbg); color:var(--okfg); border:2px solid var(--okline);
+  font-size:15.5px; font-weight:700; letter-spacing:.01em}
+.venue.accepted .v{color:var(--okv)}
 .btns{display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin:26px 0 4px}
 .btn{display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:999px;
   background:var(--btnbg); color:var(--btnfg); font-size:15px; font-weight:500;
@@ -187,6 +193,7 @@ footer a{color:var(--muted)}
   --btnbg:#e9ecef; --btnfg:#0f1114; --btnline:#e9ecef; --btnhover:#fff;
   --ghostbg:transparent; --ghostline:#333a42;
   --venuebg:#2a1a10; --venuefg:#ffb384; --venueline:#4a2c18;
+  --okbg:#3a2e10; --okfg:#ffc78f; --okline:#7a5c1c; --okv:#8fc0f7;
   --hlrow:#241a13;
 }
 :root[data-theme="dark"] .themebtn .to-dark{display:none}
@@ -234,7 +241,11 @@ footer a{color:var(--muted)}
       <span><sup>5</sup>Ciroos Inc.</span>
       <span class="equal"><sup>&#8727;</sup>Equal contribution</span>
     </div>
-    <div class="venue">Under review &middot; EMNLP 2026</div>
+    <div class="venue accepted">
+      <span aria-hidden="true">&#128293;</span>
+      Accepted at <span class="v">EMNLP 2026 (Findings)</span>
+      <span aria-hidden="true">&#128293;</span>
+    </div>
 
     <div class="btns">
       <a class="btn" href="https://github.com/BanglaLLM/banglasafe">
@@ -512,6 +523,7 @@ uvx banglasafe run \
                with Culturally Grounded Harms},
   author    = {Islam, Naymul and Lia, Nusrat Jahan and Roy Dipta, Shubhashis
                and Sultan, Sabik Bin and Zehady, Abdullah Khan},
+  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2026},
   year      = {2026}
 }</code></pre>
   </div>
