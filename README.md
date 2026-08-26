@@ -4,6 +4,7 @@
   <a href="https://banglallm.github.io/banglasafe/"><img alt="Accepted at EMNLP 2026 (Findings)" src="https://img.shields.io/badge/%F0%9F%94%A5%20ACCEPTED%20AT-EMNLP%202026%20%28FINDINGS%29%20%F0%9F%94%A5-b22222?style=for-the-badge&labelColor=f5a623"></a>
 </p>
 
+[![arXiv](https://img.shields.io/badge/arXiv-2608.22335-b31b1b)](https://arxiv.org/abs/2608.22335)
 [![Project page](https://img.shields.io/badge/Project-Page-3fb950)](https://banglallm.github.io/banglasafe/)
 [![Leaderboard](https://img.shields.io/badge/Leaderboard-18%20models-8957e5)](https://banglallm.github.io/banglasafe/leaderboard.html)
 [![PyPI](https://img.shields.io/pypi/v/banglasafe)](https://pypi.org/project/banglasafe/)
@@ -158,7 +159,12 @@ The benchmark measures harmful compliance. It says nothing about over-refusal, s
 @inproceedings{islam2026banglasafe,
   title     = {Register Shifts Break {LLM} Safety: A Bengali Benchmark with Culturally Grounded Harms},
   author    = {Islam, Naymul and Lia, Nusrat Jahan and Roy Dipta, Shubhashis and Sultan, Sabik Bin and Zehady, Abdullah Khan},
-  year      = {2026}
+  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2026},
+  year      = {2026},
+  eprint    = {2608.22335},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  url       = {https://arxiv.org/abs/2608.22335}
 }
 ```
 

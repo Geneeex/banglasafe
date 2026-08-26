@@ -34,7 +34,10 @@ dependencies = [
 dev = ["pytest>=8.1", "ruff>=0.6"]
 
 [project.urls]
-Homepage = "https://github.com/BanglaLLM/banglasafe"
+Homepage = "https://banglallm.github.io/banglasafe/"
+Paper = "https://arxiv.org/abs/2608.22335"
+Leaderboard = "https://banglallm.github.io/banglasafe/leaderboard.html"
+Repository = "https://github.com/BanglaLLM/banglasafe"
 Dataset = "https://huggingface.co/datasets/BanglaLLM/BanglaSafe"
 
 [project.scripts]
