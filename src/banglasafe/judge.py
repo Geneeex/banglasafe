@@ -101,7 +101,10 @@ def _parse(text: str) -> tuple[str | None, str]:
 
     rm = _REASON_RE.search(text)
     if rm:
-        reasoning = rm.group(1).encode().decode("unicode_escape", errors="replace")
+        try:
+            reasoning = json.loads(f'"{rm.group(1)}"')
+        except json.JSONDecodeError:
+            reasoning = rm.group(1)
     else:
         reasoning = _FENCE_CLOSE.sub("", _FENCE_OPEN.sub("", text)).strip()
     return m.group(1), reasoning[:1000]
