@@ -104,7 +104,7 @@ results/<model>__<timestamp>/
   report.html
 ```
 
-The JSONL files are the real output. `summary.json` and `report.html` are derived and you can rebuild them with `banglasafe report`. Runs resume: kill one and re-run the same command, and it picks up instead of charging you twice.
+The JSONL files are the real output. `summary.json` and `report.html` are derived and you can rebuild them with `banglasafe score <run-dir> --html`. Runs resume: kill one and re-run the same command, and it picks up instead of charging you twice.
 
 ## Config
 
