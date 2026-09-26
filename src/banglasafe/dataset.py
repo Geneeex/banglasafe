@@ -35,7 +35,7 @@ def fetch_prompts(revision: str = "main", *, refresh: bool = False) -> list[dict
         ) from e
 
     cache.parent.mkdir(parents=True, exist_ok=True)
-    cache.write_text(r.text)
+    cache.write_text(r.text, encoding="utf-8")
     return read_jsonl(cache)
 
 
@@ -98,7 +98,7 @@ def load_done(path: Path, key: str = "response_id") -> set[str]:
     done: set[str] = set()
     if not path.exists():
         return done
-    with path.open() as f:
+    with path.open(encoding="utf-8") as f:
         for line in f:
             line = line.strip()
             if not line:
@@ -113,11 +113,11 @@ def load_done(path: Path, key: str = "response_id") -> set[str]:
 
 
 def read_jsonl(path: Path) -> list[dict]:
-    with Path(path).open() as f:
+    with Path(path).open(encoding="utf-8") as f:
         return [json.loads(line) for line in f if line.strip()]
 
 
 def append_jsonl(path: Path, record: dict) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("a") as f:
+    with path.open("a", encoding="utf-8") as f:
         f.write(json.dumps(record, ensure_ascii=False) + "\n")
